@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Medium | A2Z Papers</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789150943348753"
+     crossorigin="anonymous"></script>
+
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables --- */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-glow: rgba(37, 99, 235, 0.3);
+            --bg-color: #f4f7fb;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            --shadow-hover: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+            --radius-card: 24px;
+            --radius-icon: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #eff6ff 50%, #f0fdf4 100%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Animated Background Elements */
+        .bg-shape {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(59, 130, 246, 0.15);
+            top: -100px;
+            left: -100px;
+        }
+
+        .shape-2 {
+            width: 500px;
+            height: 500px;
+            background: rgba(16, 185, 129, 0.1);
+            bottom: -150px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, 50px) scale(1.1);
+            }
+        }
+
+        /* --- Header/Navbar --- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .logo i {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.75rem;
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: slideDown 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        @keyframes slideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-title h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .page-title .subtitle {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .alert-box {
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: rgba(254, 226, 226, 0.8);
+            border: 1px solid #fca5a5;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            display: inline-block;
+            animation: pulseAlert 2s infinite;
+        }
+
+        @keyframes pulseAlert {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .alert-box p {
+            color: #b91c1c;
+            margin: 0.25rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* --- Grid & Cards --- */
+        .medium-grid {
+            display: grid;
+            gap: 2rem;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            perspective: 1000px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius-card);
+            padding: 3rem 2rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInCard 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInCard {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: 1;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        /* --- Hover Effects --- */
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            background: rgba(255, 255, 255, 0.95);
+            border-color: var(--primary-light);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: var(--radius-icon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2.25rem;
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5), 0 4px 6px rgba(37, 99, 235, 0.1);
+        }
+
+        .card:hover .icon-box {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+            box-shadow: 0 10px 20px var(--primary-glow);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .card:hover h2 {
+            color: var(--primary-dark);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* --- Responsive Queries --- */
+        @media (max-width: 1024px) {
+            .medium-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+            }
+
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .medium-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title .subtitle {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 2rem 1.25rem;
+            }
+
+            .card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i> A2Z Papers
+        </a>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1 id="subject-heading">Select Medium</h1>
+            <p class="subtitle">Please choose your preferred language to view papers.</p>
+            <div class="alert-box">
+                <p><b><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> We are sorry!</b></p>
+                <p>Currently, the system only has <b>Tamil Language</b> Past papers. We will upload others soon</p>
+            </div>
+        </section>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789150943348753"
+     crossorigin="anonymous"></script>
+<!-- Ads -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4789150943348753"
+     data-ad-slot="3056584346"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br>
+        <div class="medium-grid">
+<!-- Tamil Card -->
+            <a href="#" id="tam-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-font" aria-hidden="true"></i>
+                </div>
+                <h2>Tamil</h2>
+                <p>அனைத்து வினாத்தாள்கள் மற்றும் வளங்களையும் தமிழ் மொழியில் அணுகவும்.</p>
+            </a>
+
+            <!-- English Card -->
+            <a href="#" id="eng-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+                </div>
+                <h2>English</h2>
+                <p>Access all resources and past papers in English medium.</p>
+            </a>
+
+            <!-- Sinhala Card -->
+            <a href="#" id="sin-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-language" aria-hidden="true"></i>
+                </div>
+                <h2>Sinhala</h2>
+                <p>සිංහල මාධ්‍යයෙන් සියලුම ප්‍රශ්න පත්‍ර සහ සම්පත් ලබා ගන්න.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 A2Z Papers. Empowering A/L Students.
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Get the subject from URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const subject = params.get("subject") || "general"; // Default to general if none found
+
+            // 2. Update heading text to be user-friendly (Optional Bonus)
+            const heading = document.getElementById('subject-heading');
+            if (subject !== "general") {
+                // Capitalize first letter of subject for the UI
+                const subjectDisplay = subject.charAt(0).toUpperCase() + subject.slice(1);
+                heading.innerText = `Select Medium for ${subjectDisplay}`;
+            }
+
+            // 3. Dynamically set the href for each medium link
+            const engLink = document.getElementById("eng-link");
+            const sinLink = document.getElementById("sin-link");
+            const tamLink = document.getElementById("tam-link");
+
+            if (engLink) engLink.href = `engsub.html?subject=${subject}&medium=english`;
+            if (sinLink) sinLink.href = `sinsub.html?subject=${subject}&medium=sinhala`;
+            if (tamLink) tamLink.href = `tamsub.html?subject=${subject}&medium=tamil`;
+        });
+    </script>
+</body>
+
+</html>

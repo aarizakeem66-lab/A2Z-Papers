@@ -1,0 +1,56 @@
+/* Custom Backgrounds */
+.hero-bg {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-grid-bg {
+    background-color: #1e293b;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* SVG Curve Separator at the bottom of the Hero section */
+.shape-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.shape-divider .shape-fill {
+    fill: #ffffff;
+}
+
+/* Card Hover Effects */
+.offer-card {
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Faded Subject Card Icons */
+.subject-watermark {
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    font-size: 150px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}

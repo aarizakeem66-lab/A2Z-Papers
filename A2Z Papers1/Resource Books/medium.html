@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Medium | A2Z Papers</title>
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789150943348753"
+     crossorigin="anonymous"></script>
+
+
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables --- */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #60a5fa;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- Header/Navbar --- */
+        header {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* --- Grid & Cards --- */
+        .medium-grid {
+            display: grid;
+            gap: 1.5rem;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid #f3f4f6;
+            cursor: pointer;
+        }
+
+        /* --- Hover Effects --- */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background-color: #eff6ff; /* Light blue tint */
+            border-color: var(--primary-light);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.75rem;
+            transition: var(--transition);
+        }
+
+        .card:hover .icon-box {
+            background: var(--primary);
+            color: white;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* --- Responsive Queries --- */
+        @media (max-width: 1024px) {
+            .medium-grid {
+                grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+                max-width: 800px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .medium-grid {
+                grid-template-columns: 1fr; /* Mobile: 1 column */
+            }
+            
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-book-open"></i> A2Z Papers
+        </a>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1 id="subject-heading">Select Medium</h1>
+            <p>Please choose your preferred language to view Resource Books.</p>
+        </section>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789150943348753"
+     crossorigin="anonymous"></script>
+<!-- Ads -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4789150943348753"
+     data-ad-slot="3056584346"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+ 
+<Br>
+
+        <div class="medium-grid">
+<a id="tam-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-font"></i>
+                </div>
+                <h2>Tamil</h2>
+                <p>அனைத்து வினாத்தாள்கள் மற்றும் வளங்களையும் தமிழ் மொழியில் அணுகவும்.</p>
+            </a>
+
+            <!-- English Card -->
+            <a id="eng-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <h2>English</h2>
+                <p>Access all resources and past papers in English medium.</p>
+            </a>
+
+            <!-- Sinhala Card -->
+            <a id="sin-link" class="card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <h2>Sinhala</h2>
+                <p>සිංහල මාධ්‍යයෙන් සියලුම ප්‍රශ්න පත්‍ර සහ සම්පත් ලබා ගන්න.</p>
+            </a>
+
+            <!-- Tamil Card -->
+            
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 A2Z Papers. Empowering A/L Students.
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Get the subject from URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const subject = params.get("subject") || "general"; // Default to general if none found
+
+            // 2. Update heading text to be user-friendly (Optional Bonus)
+            const heading = document.getElementById('subject-heading');
+            if (subject !== "general") {
+                // Capitalize first letter of subject for the UI
+                const subjectDisplay = subject.charAt(0).toUpperCase() + subject.slice(1);
+                heading.innerText = `Select Medium for ${subjectDisplay}`;
+            }
+
+            // 3. Dynamically set the href for each medium link
+            const engLink = document.getElementById("eng-link");
+            const sinLink = document.getElementById("sin-link");
+            const tamLink = document.getElementById("tam-link");
+
+            if (engLink) engLink.href = `engsub.html?subject=${subject}&medium=english`;
+            if (sinLink) sinLink.href = `sinsub.html?subject=${subject}&medium=sinhala`;
+            if (tamLink) tamLink.href = `tamsub.html?subject=${subject}&medium=tamil`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Resource Books | A2Z Papers</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789150943348753"
+     crossorigin="anonymous"></script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Light Theme Variables */
+      --bg-color: #f5f7fb;
+      --text-color: #1e293b;
+      --text-muted: #64748b;
+      --card-bg: #ffffff;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent: #60a5fa;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --glass-bg: rgba(255, 255, 255, 0.8);
+    }
+
+    .dark-theme {
+      /* Dark Theme Variables */
+      --bg-color: #0f172a;
+      --text-color: #f8fafc;
+      --text-muted: #94a3b8;
+      --card-bg: #1e293b;
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --accent: #2563eb;
+      --border-color: #334155;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+      --glass-bg: rgba(30, 41, 59, 0.8);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* --- Navbar --- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-left .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-center ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-center a:hover {
+      color: var(--primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    .icon-btn:hover {
+      background-color: var(--border-color);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      border-radius: 2px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(96, 165, 250, 0.05) 100%);
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* --- Main Layout --- */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2.5rem;
+      padding-bottom: 4rem;
+    }
+
+    /* --- Cards Grid --- */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .file-meta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-download {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background 0.3s ease, transform 0.2s;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .btn-download:hover {
+      background: var(--primary-hover);
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    /* --- Right Sidebar Ads --- */
+    .ad-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .ad-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .ad-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .ad-placeholder {
+      width: 100%;
+      height: 250px;
+      border: 2px dashed var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      background: var(--bg-color);
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* --- Download Modal / Popup --- */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 450px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid var(--border-color);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .modal-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-content p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-container {
+      background: var(--bg-color);
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--primary);
+      border-radius: 10px;
+      transition: width 1s linear;
+    }
+
+    .timer-text {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Modal Ad Box */
+    .modal-ad {
+      height: 100px;
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: var(--bg-color);
+    }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 992px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .ad-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .ad-card {
+        flex: 1 1 calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-center {
+        display: none;
+        /* Hide for simplicity, or implement mobile menu */
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ad-sidebar {
+        flex-direction: column;
+      }
+
+      .ad-card {
+        flex: 1 1 100%;
+      }
+
+      .hero {
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="#" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        A2Z Papers
+      </a>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Past Papers</a></li>
+        <li><a href="#" style="color: var(--primary);">Resource Books</a></li>
+        <li><a href="#">Short Notes</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <button class="icon-btn" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+      </button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+      </button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Physics Resource Books</h1>
+    <p>Download all official A/L Physics resource books from Unit 1 to Unit 13 for better understanding and exam
+      preparation.</p>
+  </section>
+
+  <div class="container">
+
+    <main class="books-grid" id="books-container">
+    </main>
+
+    <aside class="ad-sidebar">
+      <div class="ad-card">
+        <span class="ad-label">Sponsored Ad</span>
+        <div class="ad-placeholder">
+          <span>AdSpace 300x250</span>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Support A2Z Papers by visiting our sponsors.</p>
+      </div>
+
+      <div class="ad-card">
+        <span class="ad-label">Sponsored Ad</span>
+        <div class="ad-placeholder">
+          <span>AdSpace 300x250</span>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Premium educational materials.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="modal-overlay" id="download-modal">
+    <div class="modal-content">
+      <div class="modal-spinner"></div>
+      <h2>Preparing Download...</h2>
+      <p>Your Physics Resource Book will start downloading shortly.</p>
+
+      <div class="timer-text">Starting in <span id="countdown-timer">5</span>s</div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="modal-ad">
+        <span>Sponsor Message Here</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data for the 13 Physics Units
+    const physicsUnits = [
+      { id: 1, title: "Unit 1 – Measurements", size: "12.4 MB", file: "books/physics/unit1.pdf" },
+      { id: 2, title: "Unit 2 – Mechanics", size: "15.2 MB", file: "books/physics/unit2.pdf" },
+      { id: 3, title: "Unit 3 – Oscillations and Waves", size: "14.1 MB", file: "books/physics/unit3.pdf" },
+      { id: 4, title: "Unit 4 – Thermal Physics", size: "11.8 MB", file: "books/physics/unit4.pdf" },
+      { id: 5, title: "Unit 5 – Electricity", size: "16.5 MB", file: "books/physics/unit5.pdf" },
+      { id: 6, title: "Unit 6 – Magnetism", size: "13.7 MB", file: "books/physics/unit6.pdf" },
+      { id: 7, title: "Unit 7 – Electronics", size: "10.9 MB", file: "books/physics/unit7.pdf" },
+      { id: 8, title: "Unit 8 – Matter and Radiation", size: "9.5 MB", file: "books/physics/unit8.pdf" },
+      { id: 9, title: "Unit 9 – Modern Physics", size: "11.2 MB", file: "books/physics/unit9.pdf" },
+      { id: 10, title: "Unit 10 – Mechanical Properties of Matter", size: "8.8 MB", file: "books/physics/unit10.pdf" },
+      { id: 11, title: "Unit 11 – Gravitation", size: "7.4 MB", file: "books/physics/unit11.pdf" },
+      { id: 12, title: "Unit 12 – Nuclear Physics", size: "9.1 MB", file: "books/physics/unit12.pdf" },
+      { id: 13, title: "Unit 13 – Applied Physics", size: "10.5 MB", file: "books/physics/unit13.pdf" }
+    ];
+
+    // 1. Render Cards
+    const booksContainer = document.getElementById('books-container');
+
+    physicsUnits.forEach(unit => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+                <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                </div>
+                <h3>${unit.title}</h3>
+                <p>Official A/L Physics Resource Book.</p>
+                <div class="file-meta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Size: ${unit.size}
+                </div>
+                <button class="btn-download" onclick="startDownload('${unit.file}')">
+                    Download
+                </button>
+            `;
+      booksContainer.appendChild(card);
+    });
+
+    // 2. Download Modal Logic
+    const modal = document.getElementById('download-modal');
+    const timerElement = document.getElementById('countdown-timer');
+    const progressBar = document.getElementById('progress-bar');
+
+    function startDownload(filePath) {
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+
+      // Show Modal
+      modal.classList.add('active');
+
+      let timeLeft = 5;
+      timerElement.textContent = timeLeft;
+      progressBar.style.width = '0%';
+
+      // Start animation (Needs a slight timeout to trigger CSS transition properly)
+      setTimeout(() => {
+        progressBar.style.width = '100%';
+      }, 50);
+
+      // Countdown Interval
+      const countdown = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          triggerActualDownload(filePath);
+          closeModal();
+        }
+      }, 1000);
+    }
+
+    function triggerActualDownload(filePath) {
+      // Create an invisible anchor tag to force download
+      const a = document.createElement('a');
+      a.href = filePath;
+      // Extract filename from path
+      a.download = filePath.split('/').pop();
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      // Reset modal styles for next click
+      setTimeout(() => {
+        progressBar.style.width = '0%';
+        timerElement.textContent = '5';
+      }, 300);
+    }
+
+    // 3. Dark Mode Toggle with localStorage
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check local storage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      body.classList.add('dark-theme');
+      setSunIcon();
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+        setSunIcon();
+      } else {
+        localStorage.setItem('theme', 'light');
+        setMoonIcon();
+      }
+    });
+
+    function setSunIcon() {
+      themeIcon.innerHTML = `<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>`;
+    }
+
+    function setMoonIcon() {
+      themeIcon.innerHTML = `<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>`;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A2Z Papers - Empowering Sri Lankan A/L students with quality past papers, model papers, elaborations, and learning resources.">
+    <meta name="keywords" content="A/L, Sri Lanka, Past Papers, Model Papers, Education, A2Z Papers, Resource Books">
+    <title>About Us | A2Z Papers</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Colors */
+            --primary: #4F46E5;
+            /* Indigo */
+            --primary-light: #818CF8;
+            --primary-dark: #3730A3;
+            --secondary: #06B6D4;
+            /* Cyan */
+            --accent: #8B5CF6;
+            /* Violet */
+
+            --bg-color: #0f172a;
+            --bg-secondary: #1e293b;
+
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--secondary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            font-size: 1.1rem;
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(to right, var(--secondary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Mission Section */
+        .mission {
+            text-align: center;
+            position: relative;
+        }
+
+        .mission-box {
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(79, 70, 229, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            color: var(--primary-light);
+        }
+
+        .mission-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 30px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+            transition: 0.8s ease;
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .card-1 .service-icon {
+            color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .card-2 .service-icon {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .card-3 .service-icon {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .card-4 .service-icon {
+            color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-card ul li svg {
+            width: 14px;
+            height: 14px;
+            color: var(--primary-light);
+        }
+
+        /* Why Choose Us */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--glass-border);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            color: var(--secondary);
+            flex-shrink: 0;
+            background: rgba(6, 182, 212, 0.1);
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+        }
+
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Vision & Who */
+        .vision-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .vision-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+
+        .vision-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-num {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-num span {
+            font-size: 2rem;
+        }
+
+        .stat-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Collab Section */
+        .collab {
+            display: flex;
+            justify-content: center;
+            margin: 60px 0;
+        }
+
+        .collab-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            color: white;
+            font-weight: 500;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+            transition: var(--transition);
+        }
+
+        .collab-badge:hover {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+            transform: scale(1.05);
+        }
+
+        .collab-badge svg {
+            color: #a78bfa;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .contact-email {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating WhatsApp */
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 35px auto;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-img {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-box {
+                padding: 30px;
+            }
+
+            .collab-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <defs>
+                        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#06B6D4" />
+                            <stop offset="100%" stop-color="#818CF8" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                </svg>
+                <span>A2Z Papers</span>
+            </a>
+            <a href="home.html" class="btn btn-secondary" style="padding: 8px 20px; font-size: 0.9rem;">Back to
+                Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text animate-on-scroll">
+                <h1>Empowering A/L Students with <span>Quality Learning Resources</span></h1>
+                <p>A2Z Papers is a dedicated educational platform created to help Sri Lankan A/L students access past
+                    papers, resource books, model papers, elaborations, and study materials in one organized place.</p>
+                <div class="hero-btns">
+                    <a href="home.html" class="btn btn-primary">
+                        Explore Resources
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="PASTE WHATSAPP LINK HERE" class="btn btn-secondary">Join Whatsapp Community</a>
+                </div>
+            </div>
+            <div class="hero-img animate-on-scroll" style="transition-delay: 0.2s;">
+                <!-- Modern Education Illustration SVG -->
+                <svg width="100%" height="auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="50" width="300" height="200" rx="16" fill="rgba(30, 41, 59, 0.8)"
+                        stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+                    <path d="M50 100L350 100" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+                    <circle cx="80" cy="75" r="5" fill="#ef4444" />
+                    <circle cx="100" cy="75" r="5" fill="#eab308" />
+                    <circle cx="120" cy="75" r="5" fill="#22c55e" />
+                    <rect x="90" y="130" width="100" height="80" rx="8" fill="rgba(79, 70, 229, 0.2)" stroke="#4F46E5"
+                        stroke-width="2" />
+                    <rect x="210" y="130" width="100" height="40" rx="8" fill="rgba(6, 182, 212, 0.2)" stroke="#06B6D4"
+                        stroke-width="2" />
+                    <rect x="210" y="180" width="100" height="30" rx="8" fill="rgba(139, 92, 246, 0.2)" stroke="#8B5CF6"
+                        stroke-width="2" />
+                    <path d="M110 160L140 160M110 180L160 180" stroke="#818CF8" stroke-width="4"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section mission">
+        <div class="container">
+            <div class="glass-panel mission-box animate-on-scroll">
+                <div class="mission-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="6" />
+                        <circle cx="12" cy="12" r="2" />
+                    </svg>
+                </div>
+                <h2 class="section-title" style="font-size: 2rem;">Our Mission</h2>
+                <p class="mission-text">"Our mission is to make high-quality A/L learning resources easily accessible
+                    for every student. We aim to reduce the difficulty of finding study materials by providing a simple,
+                    organized, and fast platform."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Provide -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">What We Provide</h2>
+            <p class="section-desc animate-on-scroll">A comprehensive ecosystem designed to support your academic
+                journey with carefully curated materials.</p>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <a href="past-papers.html" class="glass-panel service-card card-1 animate-on-scroll"
+                    style="transition-delay: 0.1s;">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
+                    <h3>Past Papers</h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> A/L previous examination papers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Subject-wise organization</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Easy access for revision</li>
+                    </ul>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="resource-books.html" class="glass-panel service-card card-2 animate-on-scroll"
+                    style="transition-delay: 0.2s;">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                        </svg>
+                    </div>
+                    <h3>Resource Books</h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Official syllabus-based materials</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Physics, Chemistry, Biology</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> High-quality scans</li>
+                    </ul>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="model-papers.html" class="glass-panel service-card card-3 animate-on-scroll"
+                    style="transition-delay: 0.3s;">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                    </div>
+                    <h3>Model Papers</h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Practice papers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Exam preparation materials</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Marking schemes included</li>
+                    </ul>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="elaborations.html" class="glass-panel service-card card-4 animate-on-scroll"
+                    style="transition-delay: 0.4s;">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
+                    <h3>Elaborations</h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Expert explanations</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Past paper discussions</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg> Step-by-step guides</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Who Is It For -->
+    <section class="section">
+        <div class="container features">
+            <div class="animate-on-scroll">
+                <h2 class="section-title" style="text-align: left;">Why Choose A2Z Papers</h2>
+                <div class="features-list mt-4">
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Organized Content</h4>
+                            <p>Subject-wise clear categorization</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Mobile Friendly</h4>
+                            <p>Optimized for all your devices</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Fast Access</h4>
+                            <p>No waiting, instant resource access</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Student Focused</h4>
+                            <p>Designed for optimal learning</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-9.28l5.67-5.67" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Regular Updates</h4>
+                            <p>Latest papers added frequently</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg></div>
+                        <div class="feature-text">
+                            <h4>Free Support</h4>
+                            <p>100% free educational resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="glass-panel" style="padding: 40px;">
+                    <h2 class="section-title" style="text-align: left; font-size: 2rem;">Who Is It For?</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                        “A2Z Papers is designed for Sri Lankan Advanced Level students who want a simple way to access
+                        learning materials and improve their exam preparation.”
+                    </p>
+
+                    <h3 style="margin-bottom: 15px; color: var(--text-main);">Quality & Reliability</h3>
+                    <ul style="list-style: none; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--secondary);">•</span> Carefully organized resources
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--secondary);">•</span> User-friendly experience
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--secondary);">•</span> Focus on educational value
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--secondary);">•</span> Continuous improvement
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="vision-section animate-on-scroll">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Our Vision</h2>
+                <p class="vision-text">
+                    “To become a trusted digital learning platform for Sri Lankan students by creating an accessible
+                    ecosystem of educational resources.”
+                </p>
+            </div>
+
+            <div class="stats mt-5" style="margin-top: 60px;">
+                <div class="glass-panel stat-item animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="stat-num" data-target="10000">0<span>+</span></div>
+                    <div class="stat-text">Students Reached</div>
+                </div>
+                <div class="glass-panel stat-item animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="stat-num" data-target="500">0<span>+</span></div>
+                    <div class="stat-text">Study Materials</div>
+                </div>
+                <div class="glass-panel stat-item animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="stat-num" data-target="100">0<span>+</span></div>
+                    <div class="stat-text">Past Papers</div>
+                </div>
+                <div class="glass-panel stat-item animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="stat-num">24/7</div>
+                    <div class="stat-text">Learning Access</div>
+                </div>
+            </div>
+
+            <div class="collab animate-on-scroll">
+                <div class="collab-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    Collaborated with REEMUX Private Limited
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <div class="container">
+            <div class="glass-panel contact-box animate-on-scroll">
+                <h2 class="section-title" style="margin-bottom: 10px;">Get in Touch</h2>
+                <p class="contact-email">Have questions? Reach out to us at <strong>aarizakeem66@gmail.com</strong></p>
+                <a href="mailto:aarizakeem66@gmail.com?subject=Hello&body=I want to contact you" class="btn btn-primary" style="margin-top: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Email Us Directly
+                </a>
+
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>“A2Z Papers is developed with the goal of creating a modern digital learning experience for students.”
+            </p>
+            <p style="margin-top: 10px; color: rgba(255,255,255,0.3);">&copy; <span id="year"></span> A2Z Papers. All
+                rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="floating-wa" aria-label="Join WhatsApp Community">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Animations using Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Trigger counter animation if it's a stats item
+                    const counter = entry.target.querySelector('.stat-num[data-target]');
+                    if (counter && !counter.classList.contains('counted')) {
+                        animateCounter(counter);
+                        counter.classList.add('counted');
+                    }
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Counter Animation Logic
+        function animateCounter(element) {
+            const target = +element.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+
+            let current = 0;
+            const increment = target / (duration / 16); // 60fps
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.innerHTML = target.toLocaleString() + '<span>+</span>';
+                    clearInterval(timer);
+                } else {
+                    element.innerHTML = Math.floor(current).toLocaleString() + '<span>+</span>';
+                }
+            }, 16);
+        }
+    </script>
+</body>
+
+</html>
